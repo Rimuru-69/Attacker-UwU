@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attacker UwU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Attacker UwU</h1>
+            <div class="resources">
+                <div class="money-container">
+                    <span id="money">0</span> coins
+                    <span id="money-per-second">(+1/sec)</span>
+                </div>
+                <div class="base-health">
+                    Base Health: <span id="base-health">100</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-content">
+            <div class="shop-container">
+                <h2>Shop</h2>
+                <div class="unit-buttons">
+                    <button id="buy-basic" data-cost="10" data-attack="1" data-health="10" data-type="basic">
+                        Basic Cat (10 coins)
+                        <div class="unit-stats">ATK: 1 | HP: 10</div>
+                    </button>
+                    <button id="buy-tank" data-cost="25" data-attack="1" data-health="40" data-type="tank">
+                        Tank Cat (25 coins)
+                        <div class="unit-stats">ATK: 1 | HP: 40</div>
+                    </button>
+                    <button id="buy-attacker" data-cost="40" data-attack="5" data-health="15" data-type="attacker">
+                        Fighter Cat (40 coins)
+                        <div class="unit-stats">ATK: 5 | HP: 15</div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="battlefield">
+                <div class="base player-base">
+                    <div class="base-image">🏠</div>
+                </div>
+                
+                <div id="units-container" class="units-container">
+                    <!-- Units will be added here dynamically -->
+                </div>
+                
+                <div id="enemies-container" class="enemies-container">
+                    <!-- Enemies will be added here dynamically -->
+                </div>
+                
+                <div class="base enemy-base">
+                    <div class="base-image">🏰</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="start-level">Start Level</button>
+            <div class="level-info">Level: <span id="current-level">1</span></div>
+        </div>
+
+        <div id="game-over" class="game-over hidden">
+            <div class="game-over-content">
+                <h2 id="game-over-message">Game Over!</h2>
+                <button id="restart-game">Play Again</button>
+            </div>
+        </div>
+
+        <div class="analytics">
+            <h3>Game Stats</h3>
+            <div>Units Deployed: <span id="units-deployed">0</span></div>
+            <div>Enemies Defeated: <span id="enemies-defeated">0</span></div>
+            <div>Money Spent: <span id="money-spent">0</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
