@@ -24,19 +24,37 @@
         <div class="game-content">
             <div class="shop-container">
                 <h2>Shop</h2>
-                <div class="unit-buttons">
-                    <button id="buy-basic" data-cost="10" data-attack="1" data-health="10" data-type="basic">
-                        Basic Cat (10 coins)
-                        <div class="unit-stats">ATK: 1 | HP: 10</div>
-                    </button>
-                    <button id="buy-tank" data-cost="25" data-attack="1" data-health="40" data-type="tank">
-                        Tank Cat (25 coins)
-                        <div class="unit-stats">ATK: 1 | HP: 40</div>
-                    </button>
-                    <button id="buy-attacker" data-cost="40" data-attack="5" data-health="15" data-type="attacker">
-                        Fighter Cat (40 coins)
-                        <div class="unit-stats">ATK: 5 | HP: 15</div>
-                    </button>
+                <div class="shop-sections">
+                    <div class="shop-section">
+                        <h3>Units</h3>
+                        <div class="unit-buttons">
+                            <button id="buy-basic" data-cost="10" data-attack="1" data-health="10" data-type="basic">
+                                Basic Cat (10 coins)
+                                <div class="unit-stats">ATK: 1 | HP: 10</div>
+                            </button>
+                            <button id="buy-tank" data-cost="25" data-attack="1" data-health="40" data-type="tank">
+                                Tank Cat (25 coins)
+                                <div class="unit-stats">ATK: 1 | HP: 40</div>
+                            </button>
+                            <button id="buy-attacker" data-cost="40" data-attack="5" data-health="15" data-type="attacker">
+                                Fighter Cat (40 coins)
+                                <div class="unit-stats">ATK: 5 | HP: 15</div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="shop-section">
+                        <h3>Upgrades</h3>
+                        <div class="upgrade-buttons">
+                            <button id="upgrade-income" data-cost="50" data-level="1">
+                                Income +2/sec (50 coins)
+                                <div class="upgrade-info">Current: +<span id="current-income">1</span>/sec | Level: <span id="income-level">0</span></div>
+                            </button>
+                            <button id="upgrade-attack" data-cost="75" data-level="1">
+                                Attack Power +25% (75 coins)
+                                <div class="upgrade-info">Current: +<span id="attack-bonus">0</span>% | Level: <span id="attack-level">0</span></div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -55,6 +73,10 @@
                 
                 <div class="base enemy-base">
                     <div class="base-image">🏰</div>
+                    <div class="base-health-bar">
+                        <div class="base-health-fill" id="enemy-base-health-fill"></div>
+                    </div>
+                    <div class="enemy-base-health-text">Health: <span id="enemy-base-health">100</span></div>
                 </div>
             </div>
         </div>
