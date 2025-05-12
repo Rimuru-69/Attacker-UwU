@@ -471,7 +471,7 @@ function levelComplete() {
     
     // Show level complete message
     alert(`Level ${currentLevel - 1} complete! Bonus: ${bonus} coins`);
-} += bonus;
+    } +  bonus;
     
     // Clear units and enemies
     units.forEach(unit => {
@@ -483,7 +483,7 @@ function levelComplete() {
     enemies = [];
     
     // Update level
-    currentLevel++;
+    currentLevel++;{ 
     
     // Increase money generation slightly with level
     moneyPerSecond = 1 + Math.floor(currentLevel / 3);
